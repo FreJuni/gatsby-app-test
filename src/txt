@@ -1,0 +1,16 @@
+query MyQuery {
+  allContentfulRecipes(sort: {title: ASC}) {
+    nodes {
+      id
+      image {
+        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+      }
+      prepTime
+      cookTime
+      title
+      content {
+        tags
+      }
+    }
+  }
+}
